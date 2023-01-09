@@ -59,8 +59,10 @@ RUN set -eux \
 
 WORKDIR /app
 
+RUN pip install nvidia-ml-py3 requests
 
-COPY ./scripts/ /app
+COPY ./app.py /app/
+COPY ./scripts/ /app/
 
 
 CMD ["bash"]
